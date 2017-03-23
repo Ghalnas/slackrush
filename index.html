@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Swag</title>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/resource-provider.js"></script>
+    <script src="app/shared/sidebar/sidebar-directive.js"></script>
+    <script src="app/components/login/login-service.js"></script>
+    <script src="app/components/login/login-controller.js"></script>
+    <script src="app/components/channel/channel-service.js"></script>
+    <script src="app/components/channel/channel-controller.js"></script>
+    <script src="app/shared/sidebar/sidebar-controller.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Material Design -->
+    <!--<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap-material-design/dist/css/ripples.min.css">-->
+    <!--<script src="../node_modules/bootstrap-material-design/dist/js/material.js"></script>-->
+    <!--<script>-->
+        <!--$.material.init()-->
+    <!--</script>-->
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+</head>
+<body>
+<div class="container-fluid" id="container" ui-view>
+    <a ui-sref="login-state">aaa</a>
+</div>
+</body>
+</html>
