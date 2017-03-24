@@ -1,0 +1,10 @@
+body, html {
+    height:100%;
+    background:#EEEEEE;
+}
+
+#container {
+    height:100%;
+    width:calc(100% - 250px);
+    margin-left:250px;
+}

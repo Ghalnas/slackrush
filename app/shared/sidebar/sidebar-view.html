@@ -1,46 +1,91 @@
-<style>
-    #side-bar {
-        height:100%;
-        background: #4D394B;
-        width: 220px;
-        position:fixed;
-        top:0;
-        left:0;
-        color: #AB9BA9;
-        padding-top:7px;
-        line-height: 20px;
-        font-size: 1.2em;
-    }
-    #side-bar .white {
-        color:white;
-    }
-    #side-bar .col-xs-12 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #side-bar-title {
-        font-weight: bold;
-        cursor: pointer;
-    }
-    #side-bar-title:hover {
-        background: #3E313C;
-    }
-</style>
-<div id="side-bar">
-    <div class="col-xs-12">
-        <div class="col-xs-12 white" id="side-bar-title" ui-sref="home-state">wefill</div>
-        <div class="col-xs-12">ghalnas</div>
+<!--<style>-->
+    <!--#side-bar {-->
+        <!--height:100%;-->
+        <!--background: #4D394B;-->
+        <!--width: 220px;-->
+        <!--position:fixed;-->
+        <!--top:0;-->
+        <!--left:0;-->
+        <!--color: #AB9BA9;-->
+        <!--padding-top:7px;-->
+        <!--line-height: 20px;-->
+        <!--font-size: 1.2em;-->
+    <!--}-->
+    <!--#side-bar .white {-->
+        <!--color:white;-->
+    <!--}-->
+    <!--#side-bar .col-xs-12 {-->
+        <!--padding-left: 10px;-->
+        <!--padding-right: 10px;-->
+    <!--}-->
+    <!--#side-bar-title {-->
+        <!--font-weight: bold;-->
+        <!--cursor: pointer;-->
+    <!--}-->
+    <!--#side-bar-title:hover {-->
+        <!--background: #3E313C;-->
+    <!--}-->
+<!--</style>-->
+<!--<div id="side-bar">-->
+    <!--<div class="col-xs-12">-->
+        <!--<div class="col-xs-12 white" id="side-bar-title" ui-sref="home-state">wefill</div>-->
+        <!--<div class="col-xs-12">ghalnas</div>-->
+    <!--</div>-->
+    <!--<div class="clearfix"></div>-->
+    <!--<div class="col-xs-12" ng-repeat="channel in channels">-->
+        <!--<div class="col-xs-12">-->
+            <!--<a ui-sref="channel-state({channelId: channel.id})">{{channel.name}}</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-xs-12">-->
+        <!--Add a channel-->
+    <!--</div>-->
+    <!--<form class="col-xs-12" ng-submit="createChannel()">-->
+        <!--<input type="text" ng-model="chanName" />-->
+    <!--</form>-->
+<!--</div>-->
+
+<div class="sidebar">
+    <header>
+        <h2 ui-sref="home-state">Slackrush</h2>
+        <img src="assets/images/arrow-down.svg" class="arrow">
+    </header>
+
+    <div class="sidebar-content">
+        <h4 class="sidebar-nav-header">Channels</h4>
+        <ul class="sidebar-nav-list">
+            <li ng-repeat="channel in channels">
+                <a ui-sref="channel-state({channelId: channel[0].conversationId})">{{channel.target}}</a>
+            </li>
+            <!--<li class="active">-->
+                <!--<a href="test"># random <span class="badge unread">2</span></a>-->
+            <!--</li>-->
+        </ul>
+
+        <h4 class="sidebar-nav-header">Direct Messages</h4>
+        <ul class="sidebar-nav-list">
+            <li ng-repeat="user in users">
+                <a ui-sref="to-user-state({userId: user._id, target:user.firstName})">{{user.firstName}}</a>
+            </li>
+                <!--<a ui-sref="to-user-state({userId: 58d4f29db26d33a0bf2dcff6})">Test</a>-->
+            <!--<li>-->
+                <!--<a href="test">Jean-Claude Van Damme</a>-->
+            <!--</li>-->
+        </ul>
+
     </div>
-    <div class="clearfix"></div>
-    <div class="col-xs-12" ng-repeat="channel in channels">
-        <div class="col-xs-12">
-            <a ui-sref="channel-state({channelId: channel.id})">{{channel.name}}</a>
+    <div><a ui-sref="login-state">LOGIN</a><br/>
+        <a ui-sref="register-state">REGISTER</a><br/></div>
+
+    <footer>
+
+        <img src="assets/images/pp1.jpg" class="avatar">
+        <div class="meta">
+            <span class="author">Chucl Norris</span>
+            <a href="">Logout</a>
         </div>
-    </div>
-    <div class="col-xs-12">
-        Add a channel
-    </div>
-    <form class="col-xs-12" ng-submit="createChannel()">
-        <input type="text" ng-model="chanName" />
-    </form>
+
+        <img src="assets/images/arrow-up.svg" class="arrow">
+    </footer>
+
 </div>

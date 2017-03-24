@@ -1,4 +1,12 @@
 <slack-sidebar></slack-sidebar>
 <div ng-controller="channelController">
-    ICI ON MET LES MESSAGES EN MAJUSCULE DU CHAN N°{{chanId}}
+    <ul>
+        <li ng-repeat="msg in conversation.messages">
+            {{msg.body}}
+        </li>
+    </ul>
+    <form ng-submit="send()">
+        <textarea ng-model="msg"></textarea>
+        <input type="submit">
+    </form>
 </div>
