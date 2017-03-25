@@ -1,6 +1,6 @@
 createProvider = function(module, entityName) {
     module.factory(entityName+"Service", function($http, $resource){
-        var server = 'http://172.24.1.113:3000/api';
+        var server = 'http://127.0.0.1:3000/api';
         var getEntities = function(token, url) {
             if(!url) {
                 url = "";
